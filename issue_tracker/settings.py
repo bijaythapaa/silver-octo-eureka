@@ -45,6 +45,13 @@ INSTALLED_APPS = [
     'crasher.apps.CrasherConfig',
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        # 'rest_framework.permissions.AllowAny',
+        'rest_framework.permissions.IsAuthenticated'
+        ],
+}
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -73,11 +80,6 @@ TEMPLATES = [
     },
 ]
 
-REST_FRAMEWORK = {
-    {
-        'rest_framework.permissions.AllowAny',
-    }
-}
 
 WSGI_APPLICATION = 'issue_tracker.wsgi.application'
 
