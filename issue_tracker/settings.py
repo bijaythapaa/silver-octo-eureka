@@ -43,7 +43,7 @@ INSTALLED_APPS = [
 
     # local apps
     'crasher.apps.CrasherConfig',
-    'frontend',
+
 ]
 
 
